@@ -20,10 +20,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-import Application = require("@nativescript/core/application");
+import * as Application from '@nativescript/core/application';
+import * as ImageSource from '@nativescript/core/image-source';
+import * as TypeUtils from "@nativescript/core/utils/types";
+
 var BitmapFactory = require("./BitmapFactory");
-import ImageSource = require('@nativescript/core/image-source');
-import TypeUtils = require("@nativescript/core/utils/types");
 
 
 /**
