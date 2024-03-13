@@ -20,11 +20,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-var Application = require('application');
 var BitmapFactoryCommons = require('./BitmapFactory.commons');
-var FS = require('file-system');
-var ImageSource = require('image-source');
-var TypeUtils = require("utils/types");
+var FS = require('@nativescript/core/file-system');
+var ImageSource = require('@nativescript/core/image-source');
+var TypeUtils = require("@nativescript/core/utils/types");
+var Utils = require('@nativescript/core/utils');
 
 
 // default options
@@ -466,7 +466,7 @@ function makeBitmapMutable(bitmap, opts) {
         throw "No valid bitmap object!";
     }
 
-    var ctx = Application.android.context;
+    var ctx = Utils.android.getApplicationContext();
 
     var disposeCurrent = false;
     if (!TypeUtils.isNullOrUndefined(opts.disposeCurrent)) {
